@@ -1,0 +1,208 @@
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  gap: 50px;
+  padding: 2rem 1rem;
+
+  h1 {
+    margin-top: 33px;
+    color: #205691;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  p {
+    margin-top: 20px;
+    text-align: center;
+    color: #205691;
+  }
+
+  .cadastrarEmpresa {
+    background-color: #fd7267;
+    display: flex;
+    align-items: center;
+    margin: 50px auto;
+    color: white;
+    text-decoration: none;
+    padding: 15px 48px;
+
+    width: 70%;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #f56555;
+    }
+  }
+
+  .cardSection {
+    display: flex;
+    flex-direction: row;
+
+    padding: 1rem;
+    // gap: 2rem;
+    // justify-content: center;
+    // flex-wrap: wrap;
+
+    .cards {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      h2 {
+        text-align: center;
+        font-weight: bold;
+        color: #205691;
+        font-size: 1.5rem;
+      }
+      p {
+        text-align: center;
+        font-weight: bold;
+        color: #205691;
+        margin-top: 0.5rem;
+      }
+    }
+  }
+
+  .primaryImage {
+    width: 350px;
+    height: 385px;
+  }
+
+  @media (max-width: 768px) {
+    gap: 40px;
+    padding: 1.5rem 1rem;
+
+    h1 {
+      font-size: 1.75rem;
+    }
+
+    .cadastrarEmpresa {
+      width: 80%;
+      padding: 12px 40px;
+      font-size: 0.95rem;
+    }
+
+    .cardSection {
+      align-items: flex-start;
+      padding: 1.5rem;
+      gap: 1.5rem;
+    }
+
+    .primaryImage {
+      width: 280px;
+      height: 310px;
+    }
+  }
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+    gap: 50px;
+    padding: 2rem 2rem;
+
+    h1 {
+      font-size: 2.25rem;
+    }
+
+    p {
+      font-size: 1.05rem;
+      max-width: 600px;
+    }
+
+    .cadastrarEmpresa {
+      width: 60%;
+      padding: 15px 50px;
+      font-size: 1rem;
+    }
+
+    .cardSection {
+      padding: 1.5rem;
+      gap: 2.5rem;
+
+      .cards h2 {
+        font-size: 1.75rem;
+      }
+    }
+
+    .primaryImage {
+      width: 500px;
+      height: 535px;
+    }
+  }
+
+  @media (min-width: 1025px) {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 60px;
+    padding: 4rem 3rem;
+    max-width: 1400px;
+    margin: 0 auto;
+
+    h1 {
+      font-size: 4em;
+      text-align: left;
+    }
+
+    p {
+      font-size: 1.15rem;
+      text-align: left;
+      max-width: 500px;
+    }
+
+    .cadastrarEmpresa {
+      width: auto;
+      padding: 15px 50px;
+      font-size: 1.05rem;
+    }
+
+    .cardSection {
+      padding: 0;
+      gap: 3rem;
+      flex-direction: row;
+      align-items: flex-start;
+      margin-top: 2rem;
+
+      .cards {
+        align-items: flex-start;
+
+        h2 {
+          font-size: 2.25rem;
+          text-align: left;
+        }
+
+        p {
+          text-align: left;
+          font-size: 1rem;
+        }
+      }
+    }
+
+    .primaryImage {
+      width: 600px;
+      height: 640px;
+    }
+  }
+
+  @media (min-width: 1441px) {
+    gap: 100px;
+    padding: 5rem 4rem;
+
+    h1 {
+      font-size: 5rem;
+    }
+
+    p {
+      font-size: 1.25rem;
+    }
+
+    .primaryImage {
+      width: 600px;
+      height: 640px;
+    }
+  }
+}
