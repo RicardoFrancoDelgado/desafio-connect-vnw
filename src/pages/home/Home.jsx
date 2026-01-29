@@ -1,6 +1,5 @@
 import arrow from "../../assets/icons/arrow-icon.png";
 import primary from "../../assets/images/image-primary.png";
-import { Footer } from "../../components/footer/Footer";
 import styles from "./home.module.scss";
 
 export function Home() {
