@@ -10,14 +10,42 @@
   margin-bottom: 20px;
 
   h1 {
-    font-size: 90px;
-    margin-top: 80px;
+    font-size: 62px;
+    margin-top: 50px;
     color: #205691;
   }
 
   .CardsDonate {
     display: flex;
     flex-direction: column;
+
+    justify-content: space-evenly;
+
     gap: 40px;
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr auto 1fr;
+      gap: 32px;
+      align-items: stretch;
+      .divBar {
+        width: 1px;
+        height: 100%;
+        background-color: #cbcbcb;
+      }
+      flex-direction: row;
+    }
+    @media (min-width: 1025px) {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr auto 1fr;
+      gap: 32px;
+      align-items: stretch;
+      .divBar {
+        width: 1px;
+        height: 100%;
+        background-color: #cbcbcb;
+      }
+      flex-direction: row;
+    }
   }
 }
