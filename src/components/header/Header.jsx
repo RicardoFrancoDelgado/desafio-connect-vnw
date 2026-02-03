@@ -1,43 +1,98 @@
 import { Link } from "react-router-dom";
-import styles from "./header.module.scss";
-import logo from "../../assets/images/heart-handle.png";
+import Logo from "../../assets/images/heart-handle.png";
+import S from "./header.module.scss";
+import { useEffect, useState } from "react";
 
 export function Header() {
+  const [menuAberto, setMenuAberto] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+  useEffect(() => {
+    function menuMobile() {
+      setIsMobile(window.innerWidth <= 768);
+      if (window.innerWidth > 768) {
+        setMenuAberto(false);
+      }
+    }
+
+    window.addEventListener("resize", menuMobile);
+    return () => window.removeEventListener("resize", menuMobile);
+  }, []);
+
   return (
-    <header className={styles.header}>
-      <div>
-        <Link to="/">
-          <img
-            src={logo}
-            alt="Logo da página com uma mão segurando um coração"
-          />
-        </Link>
-      </div>
+    <>
+      <header className={S.header}>
+        <section>
+          <Link to="/">
+            <img
+              className={S.imgLogo}
+              src={Logo}
+              alt="Imagem de logo do site sendo representada por uma mão segurando um coração, simbolizando apoio"
+            />
+          </Link>
+        </section>
+        {!isMobile && (
+          <nav className={S.nav}>
+            <Link className={S.link} to="/doacao">
+              Doação
+            </Link>
+            <Link className={S.link} to="/voluntariado">
+              Voluntariado
+            </Link>
+            <Link className={S.link} to="/mentoria">
+              Mentorias
+            </Link>
+            <Link className={S.link} to="/eventosEP">
+              Eventos
+            </Link>
+          </nav>
+        )}
+        <img
+          className={S.imgUser}
+          src="https://github.com/RicardoFrancoDelgado.png"
+          alt=""
+          onClick={() => setMenuAberto(!menuAberto)}
+        />
+      </header>
+      <nav className={menuAberto ? S.navUser : S.closedNav}>
+        <Link to={"/usuario"}>Ricardo Franco Delgado</Link>
+        <Link>Meu Voluntariado</Link>
+        <Link>Configurações de conta</Link>
+        {isMobile && (
+          <div>
+            <Link
+              className={S.link}
+              to="/doacao"
+              onClick={() => setMenuAberto(false)}
+            >
+              Doação
+            </Link>
+            <Link
+              className={S.link}
+              to="/voluntariado"
+              onClick={() => setMenuAberto(false)}
+            >
+              Voluntariado
+            </Link>
+            <Link
+              className={S.link}
+              to="/mentoria"
+              onClick={() => setMenuAberto(false)}
+            >
+              Mentorias
+            </Link>
+            <Link
+              className={S.link}
+              to="/eventosEP"
+              onClick={() => setMenuAberto(false)}
+            >
+              Eventos
+            </Link>
+          </div>
+        )}
 
-      <nav className={styles.nav}>
-        <Link to="/doacao" className={styles.navLink}>
-          Doação
-        </Link>
-        <Link to="/voluntariado" className={styles.navLink}>
-          Voluntariado
-        </Link>
-        <Link to="/mentoria" className={styles.navLink}>
-          Mentoria
-        </Link>
-        <Link to="/eventosep" className={styles.navLink}>
-          Eventos & Palestras
-        </Link>
+        <Link onClick={() => setMenuAberto(false)}>Sair</Link>
       </nav>
-
-      <div>
-        <Link>
-          <img
-            src="https://github.com/RicardoFrancoDelgado.png"
-            alt=""
-            className={styles.profileImage}
-          />
-        </Link>
-      </div>
-    </header>
+    </>
   );
 }
