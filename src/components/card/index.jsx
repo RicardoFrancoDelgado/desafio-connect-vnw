@@ -6,6 +6,7 @@ export default function Card({
   description,
   subdescription,
   btnTitle,
+  onClick,
 }) {
   return (
     <article className={styles.cardContainer}>
@@ -13,7 +14,7 @@ export default function Card({
       <h3>{title}</h3>
       <p>{description}</p>
       <p>{subdescription || ""}</p>
-      <button>{btnTitle}</button>
+      <button onClick={onClick}>{btnTitle}</button>
     </article>
   );
 }

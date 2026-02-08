@@ -13,9 +13,9 @@ export function Home() {
         </p>
 
         <div>
-          <a href="" className={styles.cadastrarEmpresa}>
+          <button className={styles.cadastrarEmpresa}>
             Cadastrar Empresa <img src={arrow} alt="Icone de uma seta" />
-          </a>
+          </button>
         </div>
 
         <section className={styles.cardSection}>

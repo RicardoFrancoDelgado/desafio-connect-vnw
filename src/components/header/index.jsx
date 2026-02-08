@@ -86,7 +86,7 @@ export function Header() {
               to="/eventosEP"
               onClick={() => setMenuAberto(false)}
             >
-              Eventos
+              Eventos & Palestras
             </Link>
           </div>
         )}
