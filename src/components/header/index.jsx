@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Logo from "../../assets/images/heart-handle.png";
-import S from "./header.module.scss";
+import S from "./styles.module.scss";
 import { useEffect, useState } from "react";
 
 export function Header() {

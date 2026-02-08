@@ -1,11 +1,12 @@
 import { createBrowserRouter } from "react-router-dom";
 import { Layout } from "./Layout";
-import { Home } from "./pages/home/Home";
-import { Doacao } from "./pages/doacao/Doacao";
-import { EventoEP } from "./pages/eventosEP/EventosEP";
-import { Mentoria } from "./pages/mentoria/Mentoria";
-import { Usuario } from "./pages/usuario/Usuario";
-import { Voluntariado } from "./pages/voluntariado/Voluntariado";
+import { Home } from "./pages/home";
+import { Doacao } from "./pages/doacao";
+import { EventoEP } from "./pages/eventosEP";
+import { Mentoria } from "./pages/mentoria";
+import { Usuario } from "./pages/usuario";
+import { Voluntariado } from "./pages/voluntariado";
+
 
 export const router = createBrowserRouter([
   {

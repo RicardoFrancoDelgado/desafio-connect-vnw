@@ -1,6 +1,6 @@
 import arrow from "../../assets/icons/arrow-icon.png";
 import primary from "../../assets/images/image-primary.png";
-import styles from "./home.module.scss";
+import styles from "./styles.module.scss";
 
 export function Home() {
   return (

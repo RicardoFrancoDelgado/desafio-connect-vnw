@@ -1,8 +1,8 @@
-import Card from "../../components/card/card";
-import styles from "./voluntariado.module.scss";
+import styles from "./styles.module.scss";
 import reciclagem from "../../assets/images/mutirao-reciclagem.png";
 import tecnologia from "../../assets/images/aulas-tecnologia.png";
 import esporte from "../../assets/images/esporte-inclusao.png";
+import Card from "../../components/card";
 
 export function Voluntariado() {
   return (

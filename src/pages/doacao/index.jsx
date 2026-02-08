@@ -1,8 +1,9 @@
-import Card from "../../components/card/card";
-import styles from "./doacao.module.scss";
+
+import styles from "./styles.module.scss";
 import doacao from "../../assets/images/doacao-projeto.png";
 import livros from "../../assets/images/doe-livros.png";
 import computador from "../../assets/images/doe-computador.png";
+import Card from "../../components/card";
 
 export function Doacao() {
   return (

@@ -1,8 +1,8 @@
-import Card from "../../components/card/card";
-import styles from "./eventosep.module.scss";
+import styles from "./styles.module.scss";
 import emponderando from "../../assets/images/empoderando-jovens-futuro.png";
 import transforma from "../../assets/images/tecnologia-que-transforma.png";
 import carreira from "../../assets/images/carreira-primeiro-emprego.png";
+import Card from "../../components/card";
 
 export function EventoEP() {
   return (

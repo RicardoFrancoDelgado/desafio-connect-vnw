@@ -1,8 +1,8 @@
-import Card from "../../components/card/card";
-import styles from "./mentoria.module.scss";
+import styles from "./styles.module.scss";
 import carreiraEmprego from "../../assets/images/mentoria-carreira-emprego.png";
 import experiencia from "../../assets/images/compartilhe-experiencia.png";
 import acompanhamento from "../../assets/images/acompanhamento.png";
+import Card from "../../components/card";
 
 export function Mentoria() {
   return (
