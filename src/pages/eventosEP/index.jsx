@@ -4,6 +4,7 @@ import transforma from "../../assets/images/tecnologia-que-transforma.png";
 import carreira from "../../assets/images/carreira-primeiro-emprego.png";
 import Card from "../../components/card";
 import { useState } from "react";
+import { Notification } from "../../components/notification";
 
 export function EventoEP() {
   const [showNotification, setShowNotification] = useState(false);

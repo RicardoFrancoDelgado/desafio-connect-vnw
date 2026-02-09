@@ -4,6 +4,7 @@ import livros from "../../assets/images/doe-livros.png";
 import computador from "../../assets/images/doe-computador.png";
 import Card from "../../components/card";
 import { useState } from "react";
+import { Notification } from "../../components/notification";
 
 export function Doacao() {
   const [showNotification, setShowNotification] = useState(false);
