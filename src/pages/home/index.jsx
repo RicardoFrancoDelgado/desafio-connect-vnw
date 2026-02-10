@@ -1,11 +1,11 @@
 import arrow from "../../assets/icons/arrow-icon.png";
-import primary from "../../assets/images/image-primary.png";
+import primary from "../../assets/images/hands.png";
 import styles from "./styles.module.scss";
 
 export function Home() {
   return (
-    <section className={styles.section}>
-      <div className={styles.textContent}>
+    <main className={styles.section}>
+      <section className={styles.textContent}>
         <h1>Projetos Sociais que transformam</h1>
         <p>
           Conectamos sua empres com projetos sociais impactantes. Juntos,
@@ -34,15 +34,13 @@ export function Home() {
             <p>Vidas Impactadas</p>
           </div>
         </section>
-      </div>
+      </section>
 
-      <div>
-        <img
-          src={primary}
-          alt="Imagem de duas mãos segurando bonecos de papel e um globo terrestre"
-          className={styles.primaryImage}
-        />
-      </div>
-    </section>
+      <img
+        src={primary}
+        alt="Imagem de duas mãos segurando bonecos de papel e um globo terrestre"
+        className={styles.primaryImage}
+      />
+    </main>
   );
 }
