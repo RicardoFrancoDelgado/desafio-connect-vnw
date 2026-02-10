@@ -87,32 +87,41 @@
   @media (min-width: 769px) {
     flex-direction: row;
     align-items: flex-start;
-    padding: 4rem;
+    padding: 3rem 4rem;
     gap: 3rem;
     
     // Borda e sombreamento para desktop
     border: 1px solid #e0e0e0;
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    background-color: #fff;
     
-    // Centralização total no desktop
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    max-width: 1200px;
+    // Centralização via margin
+    max-width: 900px;
+    margin: 4rem auto;
+    width: calc(100% - 4rem);
 
     .containerImage {
+      flex-shrink: 0;
+      
       img {
-        max-width: 350px;
-        width: 350px;
-        height: 350px;
+        max-width: 280px;
+        width: 280px;
+        height: 280px;
       }
     }
 
     .containerText {
+      flex: 1;
+      max-width: none;
+
       .containerTextHeading {
-        h3, p {
+        h3 {
+          text-align: left;
+          font-size: 2rem;
+        }
+        
+        p {
           text-align: left;
         }
       }
@@ -133,12 +142,15 @@
     }
   }
 
-  @media (min-width: 1025px) {
+  @media (min-width: 1200px) {
+    max-width: 1000px;
+    padding: 3.5rem 4.5rem;
+
     .containerImage {
       img {
-        max-width: 380px;
-        width: 380px;
-        height: 380px;
+        max-width: 300px;
+        width: 300px;
+        height: 300px;
       }
     }
   }
